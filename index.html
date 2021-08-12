@@ -6,14 +6,55 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-   <form id="loginForm">
-       <input type="text" id="inputName" placeholder="이름을 입력해주세요"/>
+    <div class="main">
+
+<!--stopwatch-->
+<div class="stopwatch">
+    <h2 id="stopwatch_time">00:00</h2>
+    <div class="stopwatch__btnBox">
+    <button id="stopwatch_start" >시작</button>
+    <button id="stopwatch_record" value="">구간기록</button>
+    <button id="stopwatch_stop" class="hidden" value="">중지</button>
+    <button id="stopwatch_initial" class="hidden" value="">초기화</button>
+    </div>
+    
+    
+</div>
+<!--stopwatch-->
+    
+    
+<!--loginform-->
+<h2 id="clock">00:00</h2>
+   <form id="loginForm" autocomplete=off>
+
+        <h1 id="input_message">안녕하세요! 이름을 입력해주세요</h1>
+       <input type="text" id="inputName"/>
        <input type="submit" class="hidden" value="send">
+       <div class="" style="height: 3px; width: 80%;background-color: aliceblue;margin-left: 10px;
+       "></div>
    </form>
-   <h2 id="clock">00:00</h2>
    <h1 id="greeting" class="hidden"></h1>
+    </div>  
+<!--loginform-->
+
+
+<!--todoContainner-->
+    <div class="todo_container">
+   <form action="" id="todo_form" autocomplete=off>
+     <input type="text" id="todo_input" placeholder="오늘 할일을 적어주세요" required/>
+     <div class=""style="height: 4px; width: 100%;background-color:#202B3D"></div>
+   </form>
+   <ul id="todo_list"></ul>
+   <button id="delete_btn">Delete</button>
+</div>
+<!--todoContainner-->
+
+
+   <img src="" id="bgImage">
 <script src="./js/greetings.js" defer></script>
 <script src="./js/clock.js" defer></script>
-
+<!--<script src="./js/background.js" defer></script>-->
+<script src="./js/doto.js"></script>
+<script src="./js/stopwatch.js"></script>
 </body>
 </html>

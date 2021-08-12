@@ -1,9 +1,10 @@
-//const clock = document.getElementById("clock");
+const clock = document.getElementById("clock");
 
-function timeNow(){
-    console.log("hello");
+function showNowTime(){
+    let date = new Date();
+    let hours = String(date.getHours()).padStart(2,"0");
+    let minutes = String(date.getMinutes()).padStart(2,"0");
+    
+    clock.innerText=`${hours}:${minutes}`;
 }
-//setInterval(timeNow,1000);
-
-let date = new Date();
-console.log(date.getHours(),date.getMinutes());
+setInterval(showNowTime,1000);

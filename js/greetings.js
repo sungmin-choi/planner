@@ -15,7 +15,18 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `안녕,${username}!`;
+    let date = new Date();
+    let hours = date.getHours();
+    if(hours>=18 && hours<22){
+        greeting.innerText = `good evening,${username}!`;
+    }else if((hours>=22 && hours<24)||(hours>0 && hours<6)){
+        greeting.innerText = `good night,${username}!`;
+    }else if(hours>=6 && hours<12){
+        greeting.innerText = `good morning,${username}!`;
+    }else{
+        greeting.innerText = `good afternoon,${username}!`;
+    }
+    
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
