@@ -33,6 +33,9 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+#stopwatch_seconds {
+  font-size: 30px;
+}
 #clock {
   font-size: 80px;
   margin: 5px;
