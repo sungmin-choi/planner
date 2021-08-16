@@ -9,52 +9,85 @@
     <div class="main">
 
 <!--stopwatch-->
-<div class="stopwatch">
+<div id="stopwatch">
+    <div id="stopwatch_dragbox"></div>
     <h2 id="stopwatch_time"><span id="stopwatch_hours_min">00:00</span><span id="stopwatch_seconds">:00</span></h2>
     <div class="stopwatch__btnBox">
     <button id="stopwatch_start" >시작</button>
     <button id="stopwatch_stop" class="hidden" value="">중지</button>
-    <button id="stopwatch_record" value="">구간기록</button>
     <button id="stopwatch_initial" class="hidden" value="">초기화</button>
     </div>
     
     
 </div>
 <!--stopwatch-->
-    
-    
+<!--weather-->
+    <div id="weather">
+        <span style="display: block;"  id="weather_now">waiting information!</span>
+        <span style="display: block;" id="weather_name">Seoul</span>
+        <span style="display: block;" id="weather_temp"></span>
+        <span style="display: block;" id="weather_feels"></span>
+    </div>
+<!--weather-->
 <!--loginform-->
 <h2 id="clock">00:00</h2>
    <form id="loginForm" autocomplete=off>
 
         <h1 id="input_message">안녕하세요! 이름을 입력해주세요</h1>
+       
        <input type="text" id="inputName"/>
        <input type="submit" class="hidden" value="send">
        <div class="" style="height: 3px; width: 80%;background-color: aliceblue;margin-left: 10px;
        "></div>
    </form>
    <h1 id="greeting" class="hidden"></h1>
+        <form id="search_form" action="" autocomplete=off target="_blank">
+            <input type="text" id="input_search" placeholder="가고싶은 사이트 URL입력.">
+        </form>
+   
     </div>  
+    <div id="linkSearchHistory">
+        <h1 id="hisory_title">최근 검색한 사이트</h1>
+        <div class="scrollBox" style="height: 330px; width: 350px; overflow-y: auto;">
+        <ul id="history_linklist">
+        </ul>
+    </div>
+    </div>
 <!--loginform-->
-
-
+<!--wiseSaying-->
+<div id="wiseSaying">
+    <span style="display: block;"  id="wiseSaying_saying"></span>
+    <span style="display: block;"  id="wiseSaying_author"></span>
+</div>
+<!--wiseSaying-->
 <!--todoContainner-->
     <div class="todo_container">
    <form action="" id="todo_form" autocomplete=off>
      <input type="text" id="todo_input" placeholder="오늘 할일을 적어주세요" required/>
      <div class=""style="height: 4px; width: 100%;background-color:#202B3D"></div>
    </form>
-   <ul id="todo_list"></ul>
-   <button id="delete_btn">Delete</button>
+   <div class="" style="width: 240px; overflow: hidden; height: 414px;margin: 0px; padding: 0px;">
+    <div class="" style="overflow-y: scroll; height: 414px; width: 270px;">
+        <ul id="todo_list"></ul>
+    </div>
+</div>
+   
+
+
+   <footer id="todo_footer"><button id="delete_btn">Delete</button></footer>
 </div>
 <!--todoContainner-->
 
 
    <img src="" id="bgImage">
 <script src="./js/greetings.js" defer></script>
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" defer></script>
 <script src="./js/clock.js" defer></script>
 <!--<script src="./js/background.js" defer></script>-->
-<script src="./js/doto.js"></script>
-<script src="./js/stopwatch.js"></script>
+<script src="./js/doto.js" defer></script>
+<script src="./js/stopwatch.js"defer></script>
+<script src="./js/weather.js"defer></script>
+<script src="./js/wiresaying.js"defer></script>
+<script src="./js/search.js" defer></script>
 </body>
 </html>

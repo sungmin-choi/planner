@@ -19,7 +19,7 @@ function paintGreetings(username){
     let hours = date.getHours();
     if(hours>=18 && hours<22){
         greeting.innerText = `good evening,${username}!`;
-    }else if((hours>=22 && hours<24)||(hours>0 && hours<6)){
+    }else if((hours>=22 && hours<24)||(hours>=0 && hours<6)){
         greeting.innerText = `good night,${username}!`;
     }else if(hours>=6 && hours<12){
         greeting.innerText = `good morning,${username}!`;
